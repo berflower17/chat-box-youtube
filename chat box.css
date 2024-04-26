@@ -1,1 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
 
+
+@font-face {
+    font-family: "Fredoka One";
+    src: url("https://db.onlinewebfonts.com/t/5165c0facbfede7afe6c9ef3fd635f11.eot");
+    src: url("https://db.onlinewebfonts.com/t/5165c0facbfede7afe6c9ef3fd635f11.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/5165c0facbfede7afe6c9ef3fd635f11.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/5165c0facbfede7afe6c9ef3fd635f11.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/5165c0facbfede7afe6c9ef3fd635f11.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/5165c0facbfede7afe6c9ef3fd635f11.svg#Fredoka One")format("svg");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    text-shadow: 0 0 1px #000, 0 0 2px #000;
+    background: {background_color};
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: {font_size};
+    line-height: 1.5em;
+    color: {black};
+}
+
+#log>div {
+  animation: fadeInUpBig 1s ease forwards, fadeOutUpBig 1s ease 15s forwards;
+}
+
+.colon {
+    display: none;
+}
+
+#log {
+    display: table;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px 10px;
+    width: 100%;
+    table-layout: fixed;
+}
+
+
+#log>div { 
+  position: relative; 
+  padding-top: 21px; 
+  margin-bottom: 10px; 
+}
+
+
+#log>div.deleted {
+    visibility: hidden;
+}
+
+#log .emote {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0.4em 0.2em;
+    position: relative;
+}
+
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
+
+#log .message,#log .meta {
+    vertical-align: top;
+    display: table-cell;
+    padding-bottom: 0.1em;
+}
+
+#log .meta {
+  	box-shadow: 10px 10px 10px rgba(9, 19, 20, 0.35); 
+  position: absolute; 
+  top: 0; 
+  left: 50px; 
+  padding: 9px 14px; 
+  line-height: 15px; 
+  border-radius: 8px; z-index: 1;
+
+ /* == EDITABLE PARAMETERS == */
+  /*background: url("");*/
+ background: #e8ffff; 
+  font-family: 'Fredoka One'; /*<-----CHANGUE FONT HERE*/
+  font-size: 14px; 
+  font-weight: 900;
+  text-shadow: 1px 1px 5px black;
+}
+
+#log .message {
+    word-wrap: break-word;
+    width: 65%;
+  font-family: 'Fredoka One';
+}
+
+.bubble {
+  --r: 25px; /* the radius */
+  --t: 30px; /* the size of the tail */
+  
+  max-width: 300px;
+  padding: calc(2*var(--r)/3);
+  -webkit-mask: 
+    radial-gradient(var(--t) at var(--_d) 0,#0000 98%,#000 102%) 
+      var(--_d) 100%/calc(100% - var(--r)) var(--t) no-repeat,
+    conic-gradient(at var(--r) var(--r),#000 75%,#0000 0) 
+      calc(var(--r)/-2) calc(var(--r)/-2) padding-box, 
+    radial-gradient(50% 50%,#000 98%,#0000 101%) 
+      0 0/var(--r) var(--r) space padding-box;
+  background: white;
+  color: black;
+  
+}
+.left {
+  --_d: 0%;
+  border-left: var(--t) solid #0000;
+  margin-right: var(--t);
+  place-self: start;
+}
+
+
+
+.badge {
+    display: inline-block;
+    margin-right: 0.2em;
+    position: relative;
+    height: 1em;
+    vertical-align: middle;
+    top: -0.1em;
+}
+
+.name {
+    margin-left: 0.2em;
+}
